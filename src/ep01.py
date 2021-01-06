@@ -35,7 +35,7 @@ df_declaracao.head(2)
 df_declaracao.tail(2) #Isso é um método
 
 #Número de linhas e colunas de um dataframe(tupla)
-df_declaracao.shape 
+df_declaracao.shape
 
 df_declaracao.shape[0] #Isso é um atributo (quantidade de linhas)
 df_declaracao.shape[1] #Isso é um atributo (quantidade de colunas)
@@ -51,3 +51,23 @@ df_declaracao['descricao_tipo'] #Retorna a coluna solicitada
 #Pegando x colunas
 df_declaracao[['descricao_tipo', 'detalhe']] 
 #Isso gera um novo DataFrame
+
+
+colunas_selecionadas = ['descricao_tipo','detalhe']
+df_declaracao[colunas_selecionadas]
+df_declaracao[colunas_selecionadas].tail(5)
+df_declaracao[colunas_selecionadas].head(5)
+
+
+
+#Navegando pelas colunas do DataFrame
+df_declaracao["descricao_tipo"][5] #df[column][index]
+
+
+#Informações do Dataframe
+df_declaracao.info()
+
+#Navegando pelas linhas
+
+df_declaracao.iloc[5] #Retornando objeto especifico com ILOC
+df_declaracao.iloc[5:10] #Retornando conjunto de objetos [init:final]
